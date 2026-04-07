@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Todo App
+
+A simple and elegant todo list application built with Next.js 16, TypeScript, and Tailwind CSS.
+
+## Features
+
+- ✅ Add new tasks
+- ✅ Mark tasks as complete/incomplete
+- ✅ Delete individual tasks
+- ✅ Clear all tasks at once
+- ✅ Persistent storage using localStorage
+- ✅ Dark mode support
+- ✅ Responsive design
+- ✅ Real-time task counter
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd to-do
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - Start the development server
+- `npm run build` - Build the app for production
+- `npm run start` - Start the production server
+- `npm run lint` - Run ESLint for code quality checks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Fonts:** Geist Sans & Geist Mono
+- **State Management:** React useState & useEffect
+- **Persistence:** Browser localStorage
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+to-do/
+├── app/
+│   ├── globals.css      # Global styles and Tailwind imports
+│   ├── layout.tsx       # Root layout component
+│   └── page.tsx         # Main todo app component
+├── public/              # Static assets
+├── package.json         # Dependencies and scripts
+├── tsconfig.json        # TypeScript configuration
+├── tailwind.config.*    # Tailwind CSS configuration
+└── eslint.config.mjs    # ESLint configuration
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Usage
+
+1. **Adding Tasks:** Type in the input field and press Enter or click "Add Task"
+2. **Completing Tasks:** Click the checkbox next to any task
+3. **Deleting Tasks:** Click the trash icon next to a task
+4. **Clearing All:** Use the "Clear All" button in the footer when tasks exist
+
+Your tasks are automatically saved to your browser's localStorage and will persist between sessions.
+
+## Dark Mode
+
+The app automatically respects your system's dark mode preference. You can toggle dark mode in your browser or OS settings.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run `npm run lint` to ensure code quality
+5. Test your changes
+6. Submit a pull request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
