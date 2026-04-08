@@ -9,7 +9,8 @@ jobs:
         runs-on: ubuntu-latest
         name : deploy to staging
         steps:
-            
+
+
            - run: |
                 echo "${{secrets.SSH_PRIVATE_KEY}}" > ssh_key
                 chmod 600 ssh_key
@@ -19,7 +20,7 @@ jobs:
                     git pull
                     npm install
                     npm run build
-                    pm2 restart to-do
+                    pm2 reload to-do
                 EOF
 
 
