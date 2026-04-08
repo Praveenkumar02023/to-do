@@ -101,7 +101,7 @@ export default function Home() {
             <button
               onClick={addTodo}
               disabled={inputValue.trim() === ''}
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-medium rounded-xl transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-900 disabled:cursor-not-allowed text-white font-medium rounded-xl transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               Add Task
             </button>
