@@ -24,6 +24,7 @@ jobs:
 
                     cd prod
                     cd to-do
+                    git checkout production
                     git pull
                     rm -rf .next
                     npm ci
