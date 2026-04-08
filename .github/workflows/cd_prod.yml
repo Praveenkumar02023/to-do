@@ -23,8 +23,9 @@ jobs:
                     cd prod
                     cd to-do
                     git pull
+                    rm -rf .next
                     npm install
                     npm run build
-                    pm2 reload prod-to-do
+                    pm2 restart prod-to-do
                 EOF
         

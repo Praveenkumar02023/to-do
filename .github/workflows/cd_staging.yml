@@ -23,9 +23,10 @@ jobs:
 
                     cd to-do
                     git pull
+                    rm -rf .next
                     npm install
                     npm run build
-                    pm2 reload to-do
+                    pm2 restart to-do
                 EOF
 
 
