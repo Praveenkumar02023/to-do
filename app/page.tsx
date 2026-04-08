@@ -81,7 +81,7 @@ export default function Home() {
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mt-8">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-              Praveen's Todo List
+              Praveen ki Todo List
             </h1>
             <p className="text-gray-600 dark:text-gray-400">
               {totalCount === 0 ? 'Add your first task below!' : `${completedCount} of ${totalCount} tasks completed`}
@@ -101,7 +101,7 @@ export default function Home() {
             <button
               onClick={addTodo}
               disabled={inputValue.trim() === ''}
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-medium rounded-xl transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-900 disabled:cursor-not-allowed text-white font-medium rounded-xl transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               Add Task
             </button>
