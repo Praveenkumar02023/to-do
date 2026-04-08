@@ -15,17 +15,17 @@ jobs:
           chmod 600 ssh_key
 
           ssh -o StrictHostKeyChecking=no -i ssh_key azureuser@20.244.11.230 << 'EOF'
-            set -e
+                set -e
 
-            export NVM_DIR="$HOME/.nvm"
-            source "$NVM_DIR/nvm.sh"
-            nvm use 20
+                export NVM_DIR="$HOME/.nvm"
+                source "$NVM_DIR/nvm.sh"
+                nvm use 20
 
-            cd to-do
-            git pull
-            rm -rf .next
-            npm ci
-            npm run build
+                cd to-do
+                git pull
+                rm -rf .next
+                npm ci
+                npm run build
 
-            pm2 reload to-do
+                pm2 reload to-do
             EOF
