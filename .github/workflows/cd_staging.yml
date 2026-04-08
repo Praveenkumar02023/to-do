@@ -1,0 +1,33 @@
+name: deploy to staging
+on:
+    push:
+        branches:
+            - main
+
+jobs: 
+    deploy:
+        runs-on: ubuntu-latest
+        name : deploy to staging
+        steps:
+
+
+           - run: |
+                echo "${{secrets.SSH_PRIVATE_KEY}}" > ssh_key
+                chmod 600 ssh_key
+
+                ssh -o StrictHostKeyChecking=no -i ssh_key azureuser@20.244.11.230 << 'EOF'
+                    export NVM_DIR="$HOME/.nvm"
+                    source "$NVM_DIR/nvm.sh"
+
+                    nvm use 20
+
+                    cd to-do
+                    git pull
+                    npm install
+                    npm run build
+                    pm2 reload to-do
+                EOF
+
+
+
+
